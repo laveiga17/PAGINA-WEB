@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factura</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora de Venta</h1>
+        <form id="saleForm">
+            <label for="productName">Nombre del producto:</label>
+            <input type="text" id="productName" name="productName">
+            <label for="productPrice">Precio:</label>
+            <input type="text" id="productPrice" name="productPrice">
+            <label for="productQuantity">Cantidad:</label>
+            <input type="number" id="productQuantity" name="productQuantity">
+            <button type="submit">Agregar producto</button>
+        </form>        
+        <div id="saleDetails"></div>
+        <div id="subtotal"></div>
+        <div id="iva"></div>
+        <div id="descuento"></div>
+        <div id="total"></div>
+    
+    </div>
+    <h1>Lista de Productos</h1>
+    <div id="product-list">
+    </div>
+    <h1>Detalles de Venta</h1>
+    <div id="sale-details-container"></div>
+    <div id="invoice-container">
+    <h1>Factura</h1>
+    <div id="company-info">
+        <h2 id="company-name"></h2>
+        <p id="company-ruc"></p>
+    </div>
+    <div id="invoice-info">
+        <p id="invoice-number"></p>
+        <p id="invoice-date"></p>
+    </div>
+    <div id="client-info">
+        <p id="client-name"></p>
+        <p id="client-dni"></p>
+    </div>
+    <table id="invoice-details">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Descripción</th>
+                <th>Precio</th>
+                <th>Cantidad</th>
+                <th>Subtotal</th>
+            </tr>
+        </thead>
+        <tbody id="invoice-details-body">
+        </tbody>
+    </table>
+    <div id="invoice-summary">
+        <p id="subtotal"></p>
+        <p id="discount"></p>
+        <p id="iva"></p>
+        <p id="total"></p>
+    </div>
+    </div>
+    <script src="calculos.js"></script>
+    <script src="product.js"></script>
+    <script src="sale detail.js"></script>
+    <script src="sales.js"></script>
+</body>
+</html>
